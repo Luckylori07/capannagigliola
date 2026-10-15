@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="it">
+<head>
+<script src="assets/js/demo.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[DEMO] Menu | Capanna Gigliola</title>
+<meta name="description" content="Il menu della Capanna Gigliola: antipasti, paste all&#x27;uovo fatte in casa, selvaggina, polenta, panini, dolci, vini e bevande. Menu indicativo.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1d362b">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Capanna Gigliola">
+<meta property="og:title" content="[DEMO] Menu | Capanna Gigliola">
+<meta property="og:description" content="Il menu della Capanna Gigliola: antipasti, paste all&#x27;uovo fatte in casa, selvaggina, polenta, panini, dolci, vini e bevande. Menu indicativo.">
+<meta property="og:image" content="assets/img/capanna-gigliola-tagliatelle-gnocchetti-balcone.webp">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#contenuto">Vai al contenuto</a>
+<div class="demo-banner" data-demo-only role="note"><p><strong>VERSIONE DEMO -</strong> Proposta di sito non ancora attiva. Per averla online sul vostro dominio contatta <a href="https://tramontis.netlify.app/" target="_blank" rel="noopener">Tramontis</a>.</p></div>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="index.html" aria-label="Capanna Gigliola, home"><b>Capanna Gigliola</b><span>Ristorante a Casere, Laveno-Mombello</span></a>
+    <nav class="nav-desktop" aria-label="Navigazione principale"><ul><li><a href="index.html">Home</a></li><li><a href="storia.html">La storia</a></li><li><a href="menu.html" aria-current="page">Menu</a></li><li><a href="galleria.html">Galleria</a></li><li><a href="contatti.html">Contatti</a></li></ul></nav>
+    <div class="header-actions">
+      <a class="btn header-cta" href="tel:+390332602266"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Prenota<span class="cta-long"> al telefono</span></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="Apri il menu di navigazione"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="nav-mobile" id="nav-mobile" aria-label="Navigazione principale (mobile)">
+  <ul><li><a href="index.html">Home</a></li><li><a href="storia.html">La storia</a></li><li><a href="menu.html" aria-current="page">Menu</a></li><li><a href="galleria.html">Galleria</a></li><li><a href="contatti.html">Contatti</a></li></ul>
+  <div class="nav-foot">
+    <a class="btn btn--ivory" href="tel:+390332602266"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Chiama 0332 602266</a>
+    <p>Frazione Casere 2, Strada per Vararo<br>21014 Laveno-Mombello (VA)</p>
+  </div>
+</nav>
+<main id="contenuto">
+<section class="page-hero">
+  <div class="wrap">
+    <p class="kicker">Il menu</p>
+    <h1>Cucina casalinga, piatti di montagna</h1>
+    <p class="lead">Pasta all'uovo fatta in casa, polenta, selvaggina, salumi e dolci della casa.</p>
+  </div>
+</section>
+<div class="menu-nav"><div class="wrap"><nav aria-label="Categorie del menu"><ul id="menu-nav-list"></ul></nav></div></div>
+<section class="section" style="padding-top:clamp(32px,5vw,56px)">
+  <div class="wrap">
+    <p class="menu-note" role="note"><span>Il menu online è indicativo e potrebbe differire da quello proposto in loco. Prezzi in euro.</span></p>
+    <div id="menu-root" aria-live="polite"><p class="menu-state">Caricamento del menu in corso.</p></div>
+    <noscript><p class="menu-state">Per visualizzare il menu serve JavaScript. Chiama il ristorante al <a href="tel:+390332602266">0332 602266</a> per conoscere i piatti.</p></noscript>
+  </div>
+</section>
+<section class="reserve section" aria-labelledby="prenota-t">
+  <div class="reserve-bg"><img src="assets/img/capanna-gigliola-tramonto-dorato-lago.webp" width="720" height="540" alt="Tramonto dorato sul Lago Maggiore visto dalla montagna" loading="lazy" decoding="async"></div>
+  <div class="wrap">
+    <h2 id="prenota-t" data-reveal>Vuoi assaggiarli?</h2>
+    <p data-reveal style="--d:.1s">Il ristorante lavora su prenotazione. Chiama o scrivi su WhatsApp per riservare il tavolo e chiedere dei due menu fissi.</p>
+    <a class="reserve-phone" href="tel:+390332602266" data-reveal style="--d:.2s">0332 602266</a>
+    <div class="btn-row" data-reveal style="--d:.3s">
+      <a class="btn" href="tel:+390332602266"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Chiama ora</a>
+      <a class="btn btn--ghost" href="https://wa.me/393334390998" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.2 18.6z"/></svg>Scrivi su WhatsApp</a>
+    </div>
+    <small>Frazione Casere 2, Strada per Vararo, 21014 Laveno-Mombello (VA)</small>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><b>Capanna Gigliola</b><p>Cucina casalinga di montagna a Casere, sopra Laveno-Mombello, sul Lago Maggiore.</p></div>
+      <nav aria-label="Sezioni del sito"><h2>Il sito</h2><ul><li><a href="index.html">Home</a></li><li><a href="storia.html">La storia</a></li><li><a href="menu.html">Menu</a></li><li><a href="galleria.html">Galleria</a></li><li><a href="contatti.html">Contatti</a></li></ul></nav>
+      <div class="footer-contact"><h2>Contatti</h2><ul>
+        <li><a href="tel:+390332602266">0332 602266</a></li>
+        <li><a href="https://wa.me/393334390998" target="_blank" rel="noopener">WhatsApp 333 439 0998</a></li>
+        <li>Frazione Casere 2, Strada per Vararo<br>21014 Laveno-Mombello (VA)</li>
+        <li><a href="contatti.html">Come prenotare e arrivare</a></li>
+      </ul></div>
+      <div><h2>Informazioni</h2><ul>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="note-legali.html">Note legali</a></li>
+        <li><a href="https://www.facebook.com/RistoranteGigliola/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="credit">proposta di sito realizzata da <a href="https://tramontis.netlify.app/" target="_blank" rel="noopener">Tramontis</a></p>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
