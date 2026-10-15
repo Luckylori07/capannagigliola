@@ -1,0 +1,418 @@
+{
+ "_note": "Prezzi e piatti ripresi dal sito originale (ristorante-gigliola.weebly.com): da confermare col titolare prima della pubblicazione. Modifica qui voci e prezzi.",
+ "currency": "EUR",
+ "categories": [
+  {
+   "id": "antipasti",
+   "title": "Antipasti",
+   "items": [
+    {
+     "name": "Antipasto Gigliola",
+     "price": "11,00"
+    },
+    {
+     "name": "Antipasto salumi e formaggi con confettura nostrana",
+     "price": "13,50"
+    },
+    {
+     "name": "Antipasto salumi di selvaggina",
+     "desc": "Cervo, cinghiale e capriolo con burro aromatizzato al pino mugo.",
+     "price": "18,00"
+    },
+    {
+     "name": "Crostone di pane nero con lardo, miele e castagne",
+     "price": "14,00"
+    },
+    {
+     "name": "Degustazione di formaggi con miele, frutta e confettura nostrana",
+     "price": "15,00"
+    }
+   ]
+  },
+  {
+   "id": "primi",
+   "title": "Paste all'uovo e primi",
+   "intro": "Le paste all'uovo sono fatte in casa.",
+   "items": [
+    {
+     "name": "Tagliatelle al ragù di cinghiale",
+     "price": "14,00"
+    },
+    {
+     "name": "Gnocchetti di pane con ortiche alle erbe aromatiche",
+     "price": "12,00"
+    },
+    {
+     "name": "Mezze maniche di mirtillo con formaggina fresca e speck croccante",
+     "price": "14,00"
+    },
+    {
+     "name": "Zuppa con cavolo nero",
+     "price": "9,00"
+    },
+    {
+     "name": "Pasta al pomodoro",
+     "price": "8,00"
+    }
+   ]
+  },
+  {
+   "id": "secondi",
+   "title": "Secondi e selvaggina",
+   "items": [
+    {
+     "name": "Goulash di manzo alla moda dello chef",
+     "price": "12,00"
+    },
+    {
+     "name": "Bruscit di cinghiale",
+     "price": "13,00"
+    },
+    {
+     "name": "Bocconcini di cervo",
+     "price": "15,00"
+    },
+    {
+     "name": "Bocconcini di cinghiale in umido",
+     "price": "13,00"
+    },
+    {
+     "name": "Grigliata con selvaggina",
+     "desc": "Cervo, cinghiale e salsiccia di cinghiale.",
+     "price": "20,00"
+    }
+   ]
+  },
+  {
+   "id": "polenta",
+   "title": "Polenta",
+   "items": [
+    {
+     "name": "Polenta ai 4 formaggi",
+     "price": "10,00"
+    },
+    {
+     "name": "Polenta montanara",
+     "desc": "Polenta concia passata al forno con salsiccia spadellata.",
+     "price": "13,00"
+    },
+    {
+     "name": "Polenta con farina macinata al sasso",
+     "price": "2,50"
+    }
+   ]
+  },
+  {
+   "id": "panini",
+   "title": "Panini e piatti semplici",
+   "items": [
+    {
+     "name": "Panino con hamburger di manzo",
+     "desc": "Con casera, salsa BBQ e patatine fritte.",
+     "price": "15,00"
+    },
+    {
+     "name": "Panino ai semi di girasole con hamburger di cervo",
+     "desc": "Con toma nostrana, cipolla caramellata, salsa al rafano e patatine fritte.",
+     "price": "18,00"
+    },
+    {
+     "name": "Salsiccia di cinghiale con polenta o patatine fritte",
+     "price": "13,00"
+    },
+    {
+     "name": "Patatine fritte",
+     "price": "4,00"
+    }
+   ]
+  },
+  {
+   "id": "spuntino",
+   "title": "Per uno spuntino",
+   "items": [
+    {
+     "name": "Panino con salame prealpino",
+     "price": "4,50"
+    },
+    {
+     "name": "Panino con speck dell'Alto Adige",
+     "price": "4,00"
+    },
+    {
+     "name": "Panino con prosciutto crudo di Langhirano",
+     "price": "4,50"
+    },
+    {
+     "name": "Salsiccia alla griglia con patatine",
+     "price": "7,00"
+    },
+    {
+     "name": "Salsiccia alla griglia con polenta",
+     "price": "7,00"
+    }
+   ]
+  },
+  {
+   "id": "dolci",
+   "title": "Dolci fatti in casa",
+   "items": [
+    {
+     "name": "Bella Elena",
+     "desc": "Pasta frolla con cioccolato e pere.",
+     "price": "6,00"
+    },
+    {
+     "name": "Fagotto ai frutti di bosco",
+     "price": "6,00"
+    },
+    {
+     "name": "Torta con mela e cannella",
+     "price": "6,00"
+    },
+    {
+     "name": "Panna cotta con mirtilli",
+     "price": "6,00"
+    },
+    {
+     "name": "Tiramisù",
+     "price": "6,50"
+    },
+    {
+     "name": "Tortino caldo al cioccolato con caramello salato",
+     "price": "6,50"
+    }
+   ]
+  },
+  {
+   "id": "vini",
+   "title": "Vini",
+   "groups": [
+    {
+     "title": "Sfusi",
+     "items": [
+      {
+       "name": "Barbera o Chardonnay in caraffa",
+       "variants": [
+        {
+         "label": "1 litro",
+         "price": "11,00"
+        },
+        {
+         "label": "1/2 litro",
+         "price": "6,00"
+        },
+        {
+         "label": "1/4 litro",
+         "price": "3,50"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Rossi",
+     "items": [
+      {
+       "name": "Bonarda Oltrepò, bottiglia",
+       "price": "15,00"
+      },
+      {
+       "name": "Grignolino d'Asti",
+       "price": "20,00"
+      },
+      {
+       "name": "Dolcetto d'Alba Viglione, bottiglia",
+       "price": "25,00"
+      },
+      {
+       "name": "Barbera DOCG barricato",
+       "price": "25,00"
+      },
+      {
+       "name": "Nebbiolo Viglione, bottiglia",
+       "price": "30,00"
+      },
+      {
+       "name": "Barolo Du Re Viglione",
+       "price": "50,00"
+      }
+     ]
+    },
+    {
+     "title": "Rosati e bianchi",
+     "items": [
+      {
+       "name": "Rosita Rosé Tenuta Bianco",
+       "price": "15,00"
+      },
+      {
+       "name": "Müller Thurgau Lavis, bottiglia",
+       "price": "22,00"
+      },
+      {
+       "name": "Roero Arneis Viglione, bottiglia",
+       "price": "25,00"
+      },
+      {
+       "name": "Gewürztraminer Ritterhoff",
+       "price": "28,00"
+      }
+     ]
+    },
+    {
+     "title": "Bollicine",
+     "items": [
+      {
+       "name": "Prosecco di Valdobbiadene Merotto",
+       "price": "20,00"
+      },
+      {
+       "name": "Castel Monreale Brut",
+       "price": "35,00"
+      },
+      {
+       "name": "Franciacorta Bersi Serlini Satèn",
+       "price": "35,00"
+      },
+      {
+       "name": "Franciacorta Bersi Serlini Cuvée N4",
+       "price": "45,00"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bevande",
+   "title": "Bevande e coperto",
+   "groups": [
+    {
+     "title": "Acqua e bibite",
+     "items": [
+      {
+       "name": "Acqua",
+       "variants": [
+        {
+         "label": "1/2 litro",
+         "price": "1,50"
+        },
+        {
+         "label": "1 litro",
+         "price": "3,00"
+        }
+       ]
+      },
+      {
+       "name": "Bibite in lattina",
+       "price": "3,50"
+      }
+     ]
+    },
+    {
+     "title": "Birra artigianale del Trentino Bionoc",
+     "items": [
+      {
+       "name": "In bottiglia",
+       "variants": [
+        {
+         "label": "33 cl",
+         "price": "6,00"
+        },
+        {
+         "label": "50 cl",
+         "price": "7,50"
+        },
+        {
+         "label": "75 cl",
+         "price": "14,00"
+        }
+       ]
+      },
+      {
+       "name": "Alla spina",
+       "variants": [
+        {
+         "label": "20 cl",
+         "price": "4,00"
+        },
+        {
+         "label": "40 cl",
+         "price": "6,00"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Birra Warsteiner alla spina",
+     "items": [
+      {
+       "name": "Warsteiner",
+       "variants": [
+        {
+         "label": "20 cl",
+         "price": "3,00"
+        },
+        {
+         "label": "40 cl",
+         "price": "5,00"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Caffè e coperto",
+     "items": [
+      {
+       "name": "Caffè",
+       "price": "1,50"
+      },
+      {
+       "name": "Pane e coperto",
+       "price": "1,50"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "photos": {
+  "antipasti": {
+   "src": "assets/img/capanna-gigliola-sala-carro-prodotti-tipici.webp",
+   "alt": "La sala del ristorante con il carro in legno che espone prodotti tipici",
+   "w": 1100,
+   "h": 728
+  },
+  "primi": {
+   "src": "assets/img/capanna-gigliola-tagliatelle-gnocchetti-balcone.webp",
+   "alt": "Due ciotole di pasta sul balcone con vista sul lago",
+   "w": 480,
+   "h": 640
+  },
+  "secondi": {
+   "src": "assets/img/capanna-gigliola-carne-alla-griglia.webp",
+   "alt": "Carne alla griglia su un tagliere con foglie di alloro",
+   "w": 540,
+   "h": 960
+  },
+  "polenta": {
+   "src": "assets/img/capanna-gigliola-funghi-porcini.webp",
+   "alt": "Un cesto di funghi porcini freschi",
+   "w": 960,
+   "h": 720
+  },
+  "dolci": {
+   "src": "assets/img/capanna-gigliola-tortino-cioccolato-vista-lago.webp",
+   "alt": "Tortino al cioccolato con panna e fragole, con il lago sullo sfondo",
+   "w": 1032,
+   "h": 581
+  },
+  "bevande": {
+   "src": "assets/img/capanna-gigliola-caffe-valdostana-grolla.webp",
+   "alt": "Caffè alla valdostana nella grolla, con la fiamma accesa",
+   "w": 533,
+   "h": 960
+  }
+ }
+}
