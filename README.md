@@ -17,7 +17,7 @@ Serve un server (anche solo questo): aprendo i file con `file://` il browser blo
 
 | Percorso | Contenuto |
 |---|---|
-| `index.html`, `storia.html`, `menu.html`, `galleria.html`, `contatti.html`, `privacy.html`, `note-legali.html` | Pagine **generate** da `tools/build.py` |
+| `index.html`, `camere.html`, `storia.html`, `menu.html`, `galleria.html`, `contatti.html`, `privacy.html`, `note-legali.html` | Pagine **generate** da `tools/build.py` |
 | `tools/build.py` | Testi, header, footer, galleria e dati di contatto: **qui si modificano i contenuti** |
 | `data/menu.json` | Piatti, descrizioni e prezzi |
 | `assets/css/style.css` | Stile e variabili (colori e font in `:root`) |
@@ -38,13 +38,15 @@ Si possono anche ritoccare a mano i file `.html`, ma al prossimo build le modifi
 
 ## Aggiornare menu e prezzi
 
+Il link Menu è l'ultimo della navigazione. Il menu attuale riprende il vecchio sito e in pagina c'è una nota (visibile solo in modalità demo) che avvisa che Tramontis lo sostituirà col menu aggiornato appena il ristorante lo invia: la nota è nella funzione `menu()` di `tools/build.py`, attributo `data-demo-only`.
+
 Tutto è in `data/menu.json`. Ogni categoria ha `id`, `title` e `items` (oppure `groups` con sotto-titoli). Una voce ha `name`, `desc` (facoltativa) e `price` come testo (`"14,00"`); per più formati usa `variants: [{"label": "1/2 litro", "price": "6,00"}]`. L'ordine del file è l'ordine in pagina e la barra delle categorie si aggiorna da sola. La sezione `photos` associa una fotografia alla categoria.
 
 > **Da confermare col titolare prima della pubblicazione:** piatti e prezzi sono stati ripresi dal menu online del vecchio sito, che dichiara di non essere sempre aggiornato.
 
 ## Immagini
 
-Metti i file in `assets/img/` (WebP consigliato, nome `capanna-gigliola-<soggetto>.webp`). Le fotografie in pagina si indicano per nome in `tools/build.py` (funzione `img(...)`, elenco `GALLERY`). La foto principale della home è `capanna-gigliola-panorama-lago-hero.webp` (con la variante `-816` per mobile). Le larghezze/altezze vengono lette in automatico dal build.
+Metti i file in `assets/img/` (WebP consigliato, nome `capanna-gigliola-<soggetto>.webp`). Le fotografie in pagina si indicano per nome in `tools/build.py` (funzione `img(...)`, elenco `GALLERY`). La foto principale della home è `capanna-gigliola-panorama-notturno-hero.webp` (la stessa del vecchio sito, con la variante `-900` per mobile; riporta la firma "Mirko Forza Photography": autorizzazione da confermare). Le larghezze/altezze vengono lette in automatico dal build.
 
 ## Recapiti
 

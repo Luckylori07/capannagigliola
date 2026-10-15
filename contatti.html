@@ -26,7 +26,7 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="wordmark" href="index.html" aria-label="Capanna Gigliola, home"><b>Capanna Gigliola</b><span>Ristorante a Casere, Laveno-Mombello</span></a>
-    <nav class="nav-desktop" aria-label="Navigazione principale"><ul><li><a href="index.html">Home</a></li><li><a href="storia.html">La storia</a></li><li><a href="menu.html">Menu</a></li><li><a href="galleria.html">Galleria</a></li><li><a href="contatti.html" aria-current="page">Contatti</a></li></ul></nav>
+    <nav class="nav-desktop" aria-label="Navigazione principale"><ul><li><a href="index.html">Home</a></li><li><a href="camere.html">Camere</a></li><li><a href="storia.html">La storia</a></li><li><a href="galleria.html">Galleria</a></li><li><a href="contatti.html" aria-current="page">Contatti</a></li><li><a href="menu.html">Menu</a></li></ul></nav>
     <div class="header-actions">
       <a class="btn header-cta" href="tel:+390332602266"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Prenota<span class="cta-long"> al telefono</span></span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="Apri il menu di navigazione"><span></span></button>
@@ -34,7 +34,7 @@
   </div>
 </header>
 <nav class="nav-mobile" id="nav-mobile" aria-label="Navigazione principale (mobile)">
-  <ul><li><a href="index.html">Home</a></li><li><a href="storia.html">La storia</a></li><li><a href="menu.html">Menu</a></li><li><a href="galleria.html">Galleria</a></li><li><a href="contatti.html" aria-current="page">Contatti</a></li></ul>
+  <ul><li><a href="index.html">Home</a></li><li><a href="camere.html">Camere</a></li><li><a href="storia.html">La storia</a></li><li><a href="galleria.html">Galleria</a></li><li><a href="contatti.html" aria-current="page">Contatti</a></li><li><a href="menu.html">Menu</a></li></ul>
   <div class="nav-foot">
     <a class="btn btn--ivory" href="tel:+390332602266"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Chiama 0332 602266</a>
     <p>Frazione Casere 2, Strada per Vararo<br>21014 Laveno-Mombello (VA)</p>
@@ -79,29 +79,7 @@
   </div>
 </section>
 
-<section class="section section--stone" aria-labelledby="camera-t">
-  <div class="wrap">
-    <div class="cucina-head">
-      <div><p class="kicker" data-reveal>Dormire a Casere</p><h2 class="title" id="camera-t" data-reveal>Camera matrimoniale con bagno privato</h2></div>
-      <div class="prose" data-reveal>
-        <p>In un contesto montano, con giardino privato e un comodo terrazzo soleggiato che guarda al Sasso del Ferro.</p>
-        <ul class="check-list">
-          <li>Doccia, televisione con decoder satellitare, wi-fi gratuito</li>
-          <li>Bollitore, sdraio, giardino privato e terrazzo</li>
-          <li>Animali non ammessi</li>
-        </ul>
-        <p style="margin-top:1rem">Per disponibilità e condizioni, contatta il ristorante.</p>
-      </div>
-    </div>
-    <div class="room-photos" data-lb-group data-reveal>
-      <button type="button" class="g-item r1" style="aspect-ratio:16/8;grid-column:1/-1" data-lb aria-label="Ingrandisci la camera matrimoniale"><img src="assets/img/capanna-gigliola-camera-chalet-letto.webp" width="1100" height="620" alt="Camera matrimoniale in legno con letto dalle lenzuola gialle e porta-finestra sul terrazzo" loading="lazy" decoding="async"></button>
-      <button type="button" class="g-item r2" style="aspect-ratio:16/9" data-lb aria-label="Ingrandisci il soppalco della camera"><img src="assets/img/capanna-gigliola-camera-chalet-soppalco.webp" width="1100" height="620" alt="Camera in legno con letto matrimoniale e scala del soppalco" loading="lazy" decoding="async"></button>
-      <button type="button" class="g-item" style="aspect-ratio:16/9" data-lb aria-label="Ingrandisci il bagno"><img src="assets/img/capanna-gigliola-camera-chalet-bagno.webp" width="451" height="800" alt="Bagno privato con rivestimento in pietra e finiture di legno" loading="lazy" decoding="async"></button>
-    </div>
-  </div>
-</section>
-
-<section class="section" aria-labelledby="hike-t">
+<section class="section" id="camminate" aria-labelledby="hike-t">
   <div class="wrap">
     <div class="cucina-head">
       <div><p class="kicker" data-reveal>Camminate</p><h2 class="title" id="hike-t" data-reveal>Itinerari che passano da Casere</h2></div>
@@ -132,7 +110,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand"><b>Capanna Gigliola</b><p>Cucina casalinga di montagna a Casere, sopra Laveno-Mombello, sul Lago Maggiore.</p></div>
-      <nav aria-label="Sezioni del sito"><h2>Il sito</h2><ul><li><a href="index.html">Home</a></li><li><a href="storia.html">La storia</a></li><li><a href="menu.html">Menu</a></li><li><a href="galleria.html">Galleria</a></li><li><a href="contatti.html">Contatti</a></li></ul></nav>
+      <nav aria-label="Sezioni del sito"><h2>Il sito</h2><ul><li><a href="index.html">Home</a></li><li><a href="camere.html">Camere</a></li><li><a href="storia.html">La storia</a></li><li><a href="galleria.html">Galleria</a></li><li><a href="contatti.html">Contatti</a></li><li><a href="menu.html">Menu</a></li></ul></nav>
       <div class="footer-contact"><h2>Contatti</h2><ul>
         <li><a href="tel:+390332602266">0332 602266</a></li>
         <li><a href="https://wa.me/393334390998" target="_blank" rel="noopener">WhatsApp 333 439 0998</a></li>

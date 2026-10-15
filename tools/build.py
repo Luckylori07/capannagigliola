@@ -27,8 +27,8 @@ MAPS = "https://www.google.com/maps/search/?api=1&query=Capanna+Gigliola+Frazion
 TRAMONTIS = "https://tramontis.netlify.app/"
 DEMO_MSG = "Proposta di sito non ancora attiva. Per averla online sul vostro dominio contatta"
 
-NAV = [("index.html", "Home"), ("storia.html", "La storia"), ("menu.html", "Menu"),
-       ("galleria.html", "Galleria"), ("contatti.html", "Contatti")]
+NAV = [("index.html", "Home"), ("camere.html", "Camere"), ("storia.html", "La storia"),
+       ("galleria.html", "Galleria"), ("contatti.html", "Contatti"), ("menu.html", "Menu")]
 
 ICON = {
     "phone": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
@@ -57,7 +57,7 @@ def img(name, alt, cls="", loading="lazy", extra=""):
 
 
 # ------------------------------------------------------------------ componenti
-def head(title, desc, jsonld=None, og_img="panorama-lago-hero"):
+def head(title, desc, jsonld=None, og_img="panorama-notturno-hero"):
     ld = ""
     if jsonld:
         ld = f'\n<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>'
@@ -145,7 +145,7 @@ def footer():
 </html>"""
 
 
-def page(fname, title, desc, current, body, body_cls="", jsonld=None, og_img="panorama-lago-hero"):
+def page(fname, title, desc, current, body, body_cls="", jsonld=None, og_img="panorama-notturno-hero"):
     out = head(title, desc, jsonld, og_img) + f'\n<body{(" class=%s" % chr(34) + body_cls + chr(34)) if body_cls else ""}>\n'
     out += header(current) + '\n<main id="contenuto">\n' + body + '\n</main>\n' + footer() + "\n"
     with open(os.path.join(ROOT, fname), "w", encoding="utf-8") as f:
@@ -230,9 +230,9 @@ def g_item(f, alt, cats, shape, auto_tall=True):
     w, h = dims(f)
     if auto_tall and not shape and w / h < .85:
         shape = "tall"
-    cls = "g-item" + (f" {shape}" if shape else "")
-    return (f'<button type="button" class="{cls}" data-lb data-cat="{cats}" aria-label="Ingrandisci: {esc(alt)}">'
-            f'{img(f, alt)}</button>')
+    cls = "g-item"
+    return (f'<button type="button" class="{cls}" data-lb data-cat="{cats}" style="--ar:{w / h:.4f}" '
+            f'aria-label="Ingrandisci: {esc(alt)}">{img(f, alt)}</button>')
 
 
 # ------------------------------------------------------------------ pagine
@@ -254,7 +254,7 @@ def home():
     gprev = "".join(g_item(f, a, c, "", False) for f, a, c, s in prev)
 
     body = f"""<section class="hero" aria-labelledby="hero-t">
-  <div class="hero-media"><picture><source media="(max-width: 700px)" srcset="{IMG}panorama-lago-hero-816.webp"><img src="{IMG}panorama-lago-hero.webp" width="1632" height="918" alt="Il Lago Maggiore visto dall'alto tra i boschi, con le montagne sullo sfondo" fetchpriority="high" decoding="async"></picture></div>
+  <div class="hero-media"><picture><source media="(max-width: 700px)" srcset="{IMG}panorama-notturno-hero-900.webp"><img src="{IMG}panorama-notturno-hero.webp" width="2000" height="1324" alt="Il Lago Maggiore di notte visto dall'alto, con le luci dei paesi sulla riva e le montagne innevate sullo sfondo" fetchpriority="high" decoding="async"></picture></div>
   <div class="wrap hero-inner">
     <p class="kicker">Laveno-Mombello · Lago Maggiore</p>
     <h1 id="hero-t">I sapori della tradizione, con vista sul lago</h1>
@@ -423,6 +423,7 @@ def menu():
 <section class="section" style="padding-top:clamp(32px,5vw,56px)">
   <div class="wrap">
     <p class="menu-note" role="note"><span>Il menu online è indicativo e potrebbe differire da quello proposto in loco. Prezzi in euro.</span></p>
+    <p class="menu-note menu-note--tramontis" data-demo-only role="note"><span>Nota per il titolare: il menu qui sotto riprende quello del vecchio sito, da verificare. Quando ci invierete il menu aggiornato, <a href="{TRAMONTIS}" target="_blank" rel="noopener">Tramontis</a> lo inserisce al posto di questo, con piatti e prezzi corretti.</span></p>
     <div id="menu-root" aria-live="polite"><p class="menu-state">Caricamento del menu in corso.</p></div>
     <noscript><p class="menu-state">Per visualizzare il menu serve JavaScript. Chiama il ristorante al <a href="{TEL_HREF}">{TEL_DISPLAY}</a> per conoscere i piatti.</p></noscript>
   </div>
@@ -496,29 +497,7 @@ def contatti():
   </div>
 </section>
 
-<section class="section section--stone" aria-labelledby="camera-t">
-  <div class="wrap">
-    <div class="cucina-head">
-      <div><p class="kicker" data-reveal>Dormire a Casere</p><h2 class="title" id="camera-t" data-reveal>Camera matrimoniale con bagno privato</h2></div>
-      <div class="prose" data-reveal>
-        <p>In un contesto montano, con giardino privato e un comodo terrazzo soleggiato che guarda al Sasso del Ferro.</p>
-        <ul class="check-list">
-          <li>Doccia, televisione con decoder satellitare, wi-fi gratuito</li>
-          <li>Bollitore, sdraio, giardino privato e terrazzo</li>
-          <li>Animali non ammessi</li>
-        </ul>
-        <p style="margin-top:1rem">Per disponibilità e condizioni, contatta il ristorante.</p>
-      </div>
-    </div>
-    <div class="room-photos" data-lb-group data-reveal>
-      <button type="button" class="g-item r1" style="aspect-ratio:16/8;grid-column:1/-1" data-lb aria-label="Ingrandisci la camera matrimoniale">{img('camera-chalet-letto', 'Camera matrimoniale in legno con letto dalle lenzuola gialle e porta-finestra sul terrazzo')}</button>
-      <button type="button" class="g-item r2" style="aspect-ratio:16/9" data-lb aria-label="Ingrandisci il soppalco della camera">{img('camera-chalet-soppalco', 'Camera in legno con letto matrimoniale e scala del soppalco')}</button>
-      <button type="button" class="g-item" style="aspect-ratio:16/9" data-lb aria-label="Ingrandisci il bagno">{img('camera-chalet-bagno', 'Bagno privato con rivestimento in pietra e finiture di legno')}</button>
-    </div>
-  </div>
-</section>
-
-<section class="section" aria-labelledby="hike-t">
+<section class="section" id="camminate" aria-labelledby="hike-t">
   <div class="wrap">
     <div class="cucina-head">
       <div><p class="kicker" data-reveal>Camminate</p><h2 class="title" id="hike-t" data-reveal>Itinerari che passano da Casere</h2></div>
@@ -535,6 +514,61 @@ def contatti():
     page("contatti.html", "Contatti e prenotazioni | Capanna Gigliola",
          "Come prenotare alla Capanna Gigliola e come raggiungerla: telefono, WhatsApp, indirizzo a Casere di Laveno-Mombello e indicazioni per arrivare.",
          "contatti.html", body, jsonld=restaurant_ld(), og_img="terrazza-tavoli-lago")
+
+
+def camere():
+    body = f"""<section class="page-hero">
+  <div class="wrap split split--photo">
+    <div>
+      <p class="kicker">Dormire a Casere</p>
+      <h1>Una camera tra i boschi, sopra il lago</h1>
+      <p class="lead">Camera matrimoniale con bagno privato, in un contesto montano.</p>
+    </div>
+    <div class="arch" style="aspect-ratio:4/5;max-width:380px;justify-self:end;width:100%">{img('camera-chalet-letto', 'Camera matrimoniale in legno con letto dalle lenzuola gialle e porta-finestra sul terrazzo', loading='eager', extra=' style="object-position:38% 50%"')}</div>
+  </div>
+</section>
+<section class="section" aria-labelledby="camera-t">
+  <div class="wrap storia-grid">
+    <div>
+      <p class="kicker" data-reveal>La camera</p>
+      <h2 class="title" id="camera-t" data-reveal>Camera matrimoniale con bagno privato</h2>
+      <div class="prose" style="margin-top:1.6rem" data-reveal>
+        <p>La camera si trova in un contesto montano, con giardino privato e un comodo terrazzo in posizione soleggiata, con vista sul Sasso del Ferro.</p>
+      </div>
+      <ul class="check-list" style="margin-top:1.6rem" data-reveal>
+        <li>Bagno privato con doccia</li>
+        <li>Televisione con decoder satellitare</li>
+        <li>Internet gratuito con wi-fi</li>
+        <li>Bollitore</li>
+        <li>Sdraio, giardino privato e terrazzo</li>
+        <li>Animali non ammessi</li>
+      </ul>
+      <p class="prose" style="margin-top:1.6rem" data-reveal>Per disponibilità e condizioni, contatta direttamente il ristorante.</p>
+      <div class="btn-row" style="margin-top:2rem" data-reveal>
+        <a class="btn" href="{TEL_HREF}">{ICON['phone']}Chiama {TEL_DISPLAY}</a>
+        <a class="btn btn--forest" href="contatti.html">Tutti i contatti</a>
+      </div>
+    </div>
+    <div class="room-photos" data-lb-group data-reveal>
+      <button type="button" class="g-item r1" data-lb aria-label="Ingrandisci la camera matrimoniale">{img('camera-chalet-letto', 'Camera matrimoniale in legno con letto dalle lenzuola gialle e porta-finestra sul terrazzo')}</button>
+      <button type="button" class="g-item" data-lb aria-label="Ingrandisci il soppalco della camera">{img('camera-chalet-soppalco', 'Camera in legno con letto matrimoniale e scala del soppalco')}</button>
+      <button type="button" class="g-item" data-lb aria-label="Ingrandisci il bagno">{img('camera-chalet-bagno', 'Bagno privato con rivestimento in pietra e finiture di legno')}</button>
+    </div>
+  </div>
+</section>
+<section class="section section--stone" aria-labelledby="dint-t">
+  <div class="wrap">
+    <div class="cucina-head">
+      <div><p class="kicker" data-reveal>Intorno alla camera</p><h2 class="title" id="dint-t" data-reveal>Casere e i suoi sentieri</h2></div>
+      <p class="prose" data-reveal>Casere è un antico nucleo montano a 768 metri, sopra Laveno-Mombello. Da qui partono diversi sentieri; li trovi descritti nella pagina dei contatti.</p>
+    </div>
+    <p data-reveal><a class="link-arrow" href="contatti.html#camminate">Vedi gli itinerari {ICON['arrow']}</a></p>
+  </div>
+</section>
+{reserve_block("Chiedi della camera", "Per disponibilità e condizioni telefona o scrivi su WhatsApp: la camera si prenota direttamente con il ristorante.")}"""
+    page("camere.html", "La camera | Capanna Gigliola",
+         "Camera matrimoniale con bagno privato a Casere, sopra Laveno-Mombello: giardino privato, terrazzo con vista sul Sasso del Ferro, wi-fi gratuito. Contatta il ristorante.",
+         "camere.html", body, og_img="camera-chalet-letto")
 
 
 def legal_hero(t, lead):
@@ -573,7 +607,7 @@ def note_legali():
 <p class="todo">Da completare con il titolare: ragione sociale, partita IVA, sede legale, eventuali recapiti PEC.</p>
 <h2>Contenuti</h2>
 <p>Testi, prezzi e fotografie provengono dal sito attuale del ristorante (ristorante-gigliola.weebly.com) e sono stati riordinati per questa proposta. Il menu online è indicativo e può differire da quello proposto in sala: prezzi e piatti vanno confermati dal ristorante.</p>
-<p>Le fotografie appartengono ai rispettivi autori. L'uso definitivo delle immagini va concordato con il titolare, che dovrà confermarne la disponibilità.</p>
+<p>Le fotografie appartengono ai rispettivi autori. L'uso definitivo delle immagini va concordato con il titolare, che dovrà confermarne la disponibilità. La fotografia panoramica notturna in apertura sulla home riporta la firma di Mirko Forza Photography: l'autorizzazione all'uso va confermata prima della pubblicazione.</p>
 <h2>Responsabilità</h2>
 <p>Le informazioni su orari, prezzi e disponibilità possono cambiare: per conferma contatta direttamente il ristorante.</p>
 <h2>Font</h2>
@@ -583,5 +617,5 @@ def note_legali():
 
 
 if __name__ == "__main__":
-    home(); storia(); menu(); galleria(); contatti(); privacy(); note_legali()
+    home(); camere(); storia(); menu(); galleria(); contatti(); privacy(); note_legali()
     print("Pagine generate.")
